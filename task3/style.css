@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c9ff, #92fe9d);
+  background-size: 400% 400%;
+  animation: gradientShift 1s ease infinite;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  margin: 20px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+form p {
+  margin: 15px 0 5px;
+  color: #fff;
+  font-weight: 600;
+}
+
+form input[type="text"],form input[type="tel"],form input[type="email"],form input[type="date"],form select,form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+form input::placeholder,form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form input[type="text"]:focus,form input[type="tel"]:focus,form input[type="email"]:focus,form input[type="date"]:focus,form select:focus,form textarea:focus {
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+
+form input[type="text"]:hover,form input[type="tel"]:hover,form input[type="email"]:hover,form input[type="date"]:hover,form select:hover,form textarea:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+select[multiple] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+select[multiple]::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+select[multiple] option:checked {
+  background-color: #1abc9c !important;
+  color: #fff !important;
+}
+
+input[type="radio"],input[type="checkbox"] {
+  accent-color: #1abc9c;
+  cursor: pointer;
+}
+
+.radio-group {
+  margin-top: 5px;
+  display: flex;
+  gap: 20px;
+}
+
+.radio-group label {
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+  margin-top: 0;
+}
+.radio-group label:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+form label input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+form input[type="submit"] {
+  margin-top: 30px;
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
